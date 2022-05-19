@@ -1,4 +1,4 @@
-﻿Shader "Custom/Custom_BlinnPhong"
+﻿Shader "Custom/rim_custom"
 {
     Properties
     {
@@ -67,10 +67,20 @@
             float3 H = normalize(lightDir + viewDir);
             float spec = saturate(dot(H, s.Normal));
             spec = pow(spec, _SpecPow);
-            SpecColor = spec * _SpecCol.rgb;
+            SpecColor = spec * _SpecCol.rgb * s.Gloss;
+
+            //rim term
+            float3 rimColor;
+            float rim = abs(dot(viewDir, s.Normal));
+            float invrim = 1 - rim;
+            rimColor = pow(invrim, 6) * float3(0.5, 0.5, 0.5);
+
+            //fake spec term
+            float3 SpecColor2;
+            SpecColor2 = pow(rim, 50) * float3(0.2, 0.2, 0.2) * s.Gloss;
 
             //final term
-            final.rgb = SpecColor.rgb + DiffColor.rgb * s.Gloss;
+            final.rgb = SpecColor.rgb + DiffColor.rgb + rimColor.rgb + SpecColor2.rgb;
             final.a = s.Alpha;
             return final;// float4(SpecColor, 1);
         }
