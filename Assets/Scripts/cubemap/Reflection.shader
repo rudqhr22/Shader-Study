@@ -40,6 +40,22 @@
             o.Emission = re.rgb * m.r;
             o.Alpha = c.a;
         }
+        /*
+        float4 LightingWaterSpecular(SurfaceOutput s, float3 lightDir, float3 viewDir, float atten) {
+
+            //specular term
+            float3 H = normalize(lightDir + viewDir);
+            float spec = saturate(dot(H, s.Normal));
+            spec = pow(spec, _SPPower);
+
+            //final term
+            float4 finalColor;
+            finalColor.rgb = spec * _SPColor.rgb * _SPMulti;
+            finalColor.a = s.Alpha;//+ spec ;
+
+            return finalColor;
+        }
+        */
         ENDCG
     }
     FallBack "Diffuse"
