@@ -8,10 +8,10 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: water
-  m_Shader: {fileID: 4800000, guid: 6e6978030c10e044299eb689457f9bce, type: 3}
+  m_Shader: {fileID: 4800000, guid: f44f1319a1310164f84318244a2eca08, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
+  m_EnableInstancingVariants: 1
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
   stringTagMap: {}
@@ -24,6 +24,10 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpTex:
+        m_Texture: {fileID: 2800000, guid: 2dd3788f8589b40bf82a92d76ffc5091, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Bumpmap:
         m_Texture: {fileID: 2800000, guid: 2dd3788f8589b40bf82a92d76ffc5091, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -76,17 +80,17 @@ Material:
     - _OcclusionStrength: 1
     - _Parallax: 0.02
     - _Refract: 0
-    - _SPMulti: 3.9
-    - _SPPower: 150
+    - _SPMulti: 4.12
+    - _SPPower: 124
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _UVSec: 0
-    - _WaveH: 0.158
-    - _WaveL: 9.2
-    - _WaveT: 1
+    - _WaveH: 0.066
+    - _WaveL: 5
+    - _WaveT: 0
     - _ZWrite: 1
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _SPColor: {r: 0.8867924, g: 0.8867924, b: 0.8867924, a: 1}
+    - _SPColor: {r: 1, g: 1, b: 1, a: 1}

@@ -76,15 +76,15 @@ Material:
     - _OcclusionStrength: 1
     - _Parallax: 0.02
     - _Refract: 0.0444
-    - _SPMulti: 3
-    - _SPPower: 150
+    - _SPMulti: 1
+    - _SPPower: 153
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _UVSec: 0
-    - _WaveH: 0.1
-    - _WaveL: 12
-    - _WaveT: 1
+    - _WaveH: 0.5
+    - _WaveL: 5.9
+    - _WaveT: 3.14
     - _ZWrite: 1
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}

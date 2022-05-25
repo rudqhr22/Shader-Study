@@ -1,4 +1,4 @@
-﻿Shader "Custom/Water" {
+﻿Shader "Custom/Water2" {
 	Properties {
 		_Bumpmap ("NormalMap", 2D) = "bump" {}
 		_Cube ("Cube", Cube) = "" {}
